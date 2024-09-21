@@ -1,7 +1,8 @@
 import { FaRegEdit } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import SortIcon from "./ui/SortIcon";
-
+import { FaPlus } from "react-icons/fa";
+import Button from "./ui/Button";
 const data = [
   {
     title: "Event 1",
@@ -12,7 +13,19 @@ const data = [
 ];
 const Table: React.FC = () => {
   return (
-    <div className="m-20">
+    <div className="m-10">
+      <h1 className="flex  text-3xl font-bold text-primary-main font-inter">
+        Manajemen Kegiatan
+      </h1>
+      <div className="my-5">
+        <Button
+          text="Tambah"
+          color="primary"
+          icon={<FaPlus />}
+          fontWeight="semibold"
+        />
+      </div>
+
       <div className="overflow-x-auto rounded-lg border border-gray-200">
         <table className="min-w-full  divide-gray-200 bg-white text-sm">
           <thead className=" h-12">
