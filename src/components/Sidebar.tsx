@@ -12,7 +12,7 @@ import { GoGraph } from "react-icons/go";
 import { RiUserSettingsLine } from "react-icons/ri";
 import SideButton from "./ui/SideButton";
 import logo from "../assets/logo_kemdikbud.png";
-
+import Header from "./Header";
 const Sidebar: React.FC = () => {
   const [activeButton, setActiveButton] = useState<string | null>(null);
   const navigate = useNavigate();
@@ -125,6 +125,7 @@ const Sidebar: React.FC = () => {
       </div>
 
       <div className="flex-grow p-4">
+        <Header />
         <Outlet />
       </div>
     </div>
