@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { RxDashboard } from "react-icons/rx";
 import { IoIosStats } from "react-icons/io";
@@ -14,9 +15,11 @@ import logo from "../assets/logo_kemdikbud.png";
 
 const Sidebar: React.FC = () => {
   const [activeButton, setActiveButton] = useState<string | null>(null);
+  const navigate = useNavigate();
 
-  const handleSetActive = (label: string) => {
+  const handleSetActive = (label: string, route: string) => {
     setActiveButton(label);
+    navigate(route);
   };
 
   return (
@@ -39,13 +42,14 @@ const Sidebar: React.FC = () => {
               icon={RxDashboard}
               label="Dashboard"
               isActive={activeButton === "Dashboard"}
-              onClick={() => handleSetActive("Dashboard")}
+              onClick={() => handleSetActive("Dashboard", "/")}
             />
+            {/* Manajemen Kegiatan */}
             <SideButton
               icon={IoIosStats}
               label="Manajemen Kegiatan"
               isActive={activeButton === "Manajemen Kegiatan"}
-              onClick={() => handleSetActive("Manajemen Kegiatan")}
+              onClick={() => handleSetActive("Manajemen Kegiatan", "/table")}
             />
             <SideButton
               icon={MdOutlineCollectionsBookmark}
@@ -55,13 +59,15 @@ const Sidebar: React.FC = () => {
                 </>
               }
               isActive={activeButton === "Manajemen Publikasi Terbaru"}
-              onClick={() => handleSetActive("Manajemen Publikasi Terbaru")}
+              onClick={() =>
+                handleSetActive("Manajemen Publikasi Terbaru", "/table")
+              }
             />
             <SideButton
               icon={IoMegaphoneOutline}
               label="Manajemen Pengumuman"
               isActive={activeButton === "Manajemen Pengumuman"}
-              onClick={() => handleSetActive("Manajemen Pengumuman")}
+              onClick={() => handleSetActive("Manajemen Pengumuman", "/table")}
             />
             <SideButton
               icon={CiViewList}
@@ -71,7 +77,9 @@ const Sidebar: React.FC = () => {
                 </>
               }
               isActive={activeButton === "Manajemen Profile PDDikti"}
-              onClick={() => handleSetActive("Manajemen Profile PDDikti")}
+              onClick={() =>
+                handleSetActive("Manajemen Profile PDDikti", "/table")
+              }
             />
             <SideButton
               icon={LuFileSpreadsheet}
@@ -81,7 +89,9 @@ const Sidebar: React.FC = () => {
                 </>
               }
               isActive={activeButton === "Manajemen Standar Pelayanan"}
-              onClick={() => handleSetActive("Manajemen Standar Pelayanan")}
+              onClick={() =>
+                handleSetActive("Manajemen Standar Pelayanan", "/table")
+              }
             />
             <SideButton
               icon={CiLock}
@@ -91,13 +101,15 @@ const Sidebar: React.FC = () => {
                 </>
               }
               isActive={activeButton === "Manajemen Kebijakan Privasi"}
-              onClick={() => handleSetActive("Manajemen Kebijakan Privasi")}
+              onClick={() =>
+                handleSetActive("Manajemen Kebijakan Privasi", "/table")
+              }
             />
             <SideButton
               icon={GoGraph}
               label="Manajemen Statistik"
               isActive={activeButton === "Manajemen Statistik"}
-              onClick={() => handleSetActive("Manajemen Statistik")}
+              onClick={() => handleSetActive("Manajemen Statistik", "/table")}
             />
           </div>
         </div>
@@ -107,7 +119,7 @@ const Sidebar: React.FC = () => {
             icon={RiUserSettingsLine}
             label="Kelola Admin"
             isActive={activeButton === "Kelola Admin"}
-            onClick={() => handleSetActive("Kelola Admin")}
+            onClick={() => handleSetActive("Kelola Admin", "/table")}
           />
         </div>
       </div>
