@@ -49,7 +49,9 @@ const Sidebar: React.FC = () => {
               icon={IoIosStats}
               label="Manajemen Kegiatan"
               isActive={activeButton === "Manajemen Kegiatan"}
-              onClick={() => handleSetActive("Manajemen Kegiatan", "/table")}
+              onClick={() =>
+                handleSetActive("Manajemen Kegiatan", "/manajemen-kegiatan")
+              }
             />
             <SideButton
               icon={MdOutlineCollectionsBookmark}
@@ -60,14 +62,19 @@ const Sidebar: React.FC = () => {
               }
               isActive={activeButton === "Manajemen Publikasi Terbaru"}
               onClick={() =>
-                handleSetActive("Manajemen Publikasi Terbaru", "/table")
+                handleSetActive(
+                  "Manajemen Publikasi Terbaru",
+                  "/manajemen-kegiatan"
+                )
               }
             />
             <SideButton
               icon={IoMegaphoneOutline}
               label="Manajemen Pengumuman"
               isActive={activeButton === "Manajemen Pengumuman"}
-              onClick={() => handleSetActive("Manajemen Pengumuman", "/table")}
+              onClick={() =>
+                handleSetActive("Manajemen Pengumuman", "/manajemen-kegiatan")
+              }
             />
             <SideButton
               icon={CiViewList}
@@ -78,7 +85,10 @@ const Sidebar: React.FC = () => {
               }
               isActive={activeButton === "Manajemen Profile PDDikti"}
               onClick={() =>
-                handleSetActive("Manajemen Profile PDDikti", "/table")
+                handleSetActive(
+                  "Manajemen Profile PDDikti",
+                  "/manajemen-kegiatan"
+                )
               }
             />
             <SideButton
@@ -90,7 +100,10 @@ const Sidebar: React.FC = () => {
               }
               isActive={activeButton === "Manajemen Standar Pelayanan"}
               onClick={() =>
-                handleSetActive("Manajemen Standar Pelayanan", "/table")
+                handleSetActive(
+                  "Manajemen Standar Pelayanan",
+                  "/manajemen-kegiatan"
+                )
               }
             />
             <SideButton
@@ -102,14 +115,19 @@ const Sidebar: React.FC = () => {
               }
               isActive={activeButton === "Manajemen Kebijakan Privasi"}
               onClick={() =>
-                handleSetActive("Manajemen Kebijakan Privasi", "/table")
+                handleSetActive(
+                  "Manajemen Kebijakan Privasi",
+                  "/manajemen-kegiatan"
+                )
               }
             />
             <SideButton
               icon={GoGraph}
               label="Manajemen Statistik"
               isActive={activeButton === "Manajemen Statistik"}
-              onClick={() => handleSetActive("Manajemen Statistik", "/table")}
+              onClick={() =>
+                handleSetActive("Manajemen Statistik", "/manajemen-kegiatan")
+              }
             />
           </div>
         </div>
@@ -119,7 +137,9 @@ const Sidebar: React.FC = () => {
             icon={RiUserSettingsLine}
             label="Kelola Admin"
             isActive={activeButton === "Kelola Admin"}
-            onClick={() => handleSetActive("Kelola Admin", "/table")}
+            onClick={() =>
+              handleSetActive("Kelola Admin", "/manajemen-kegiatan")
+            }
           />
         </div>
       </div>

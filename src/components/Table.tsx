@@ -51,10 +51,7 @@ const Table: React.FC = () => {
   };
 
   return (
-    <div className="m-10">
-      <h1 className="flex text-3xl font-bold text-primary-main font-inter">
-        Manajemen Kegiatan
-      </h1>
+    <>
       <div className="my-5">
         <Button
           text="Tambah"
@@ -140,7 +137,7 @@ const Table: React.FC = () => {
           </tbody>
         </table>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
-import Table from "./components/Table";
+import ManajemenKegiatan from "./pages/ManajemenKegiatan";
 const App: React.FC = () => {
   return (
     <div>
@@ -9,7 +9,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Sidebar />}>
             <Route index element={<Dashboard />} />
-            <Route path="table" element={<Table />} />
+            <Route path="manajemen-kegiatan" element={<ManajemenKegiatan />} />
           </Route>
         </Routes>
       </Router>
