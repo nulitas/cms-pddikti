@@ -14,7 +14,7 @@ const SideButton: React.FC<SideButtonProps> = ({
   return (
     <div
       onClick={onClick}
-      className={`text-base rounded-lg flex gap-3 items-center py-3 px-2 cursor-pointer
+      className={`group text-base rounded-lg flex gap-3 items-center py-3 px-2 cursor-pointer
       ${isActive ? "bg-primary-main text-neutral-10" : "text-neutral-80"}
       hover:bg-primary-main hover:text-neutral-10 transition-colors duration-300`}
     >
@@ -22,10 +22,15 @@ const SideButton: React.FC<SideButtonProps> = ({
         <Icon
           className={`w-6 h-6 ${
             isActive ? "text-neutral-10" : "text-neutral-80"
-          }
-          hover:text-neutral-10 transition-colors duration-300`}
+          } group-hover:text-neutral-10 transition-colors duration-300`}
         />
-        <p>{label}</p>
+        <p
+          className={`${
+            isActive ? "text-neutral-10" : "text-neutral-80"
+          } group-hover:text-neutral-10 transition-colors duration-300`}
+        >
+          {label}
+        </p>
       </div>
     </div>
   );
