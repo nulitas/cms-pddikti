@@ -24,7 +24,7 @@ const Sidebar: React.FC = () => {
 
   return (
     <div className="flex">
-      <div className="max-w-80 h-screen p-10 shadow-sm border-r justify-between flex flex-col font-inter ">
+      <div className="max-w-80 h-screen p-10  justify-between flex flex-col font-inter ">
         <div className="gap-8 flex flex-col">
           <div className="flex gap-3 ">
             <img
