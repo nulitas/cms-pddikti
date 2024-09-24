@@ -27,19 +27,19 @@ const Button: React.FC<ButtonProps> = ({
     color === "primary"
       ? "bg-primary-main hover:bg-primary-hover text-white"
       : color === "secondary"
-      ? "bg-secondary-main hover:bg-secondary-main text-white"
-      : color === "danger"
-      ? "bg-danger-main hover:bg-danger-hover text-white"
-      : "bg-primary-main hover:bg-primary-hover text-white";
+        ? "bg-secondary-main hover:bg-secondary-main text-white"
+        : color === "danger"
+          ? "bg-danger-main hover:bg-danger-hover text-white"
+          : "bg-primary-main hover:bg-primary-hover text-white";
 
   const outlineColorStyle =
     color === "primary"
       ? "border border-primary-main text-primary-main hover:bg-primary-hover hover:text-white"
       : color === "secondary"
-      ? "border border-secondary-main text-secondary-main hover:bg-secondary-hover hover:text-white"
-      : color === "danger"
-      ? "border border-danger-main text-danger-main hover:bg-danger-main hover:text-white"
-      : "border border-primary-main text-primary-main hover:bg-primary-hover hover:text-white";
+        ? "border border-secondary-main text-secondary-main hover:bg-secondary-hover hover:text-white"
+        : color === "danger"
+          ? "border border-danger-main text-danger-main hover:bg-danger-main hover:text-white"
+          : "border border-primary-main text-primary-main hover:bg-primary-hover hover:text-white";
 
   const disabledStyle = "rounded bg-neutral-50 text-white cursor-not-allowed";
 
@@ -47,19 +47,19 @@ const Button: React.FC<ButtonProps> = ({
     size === "small"
       ? "py-1 px-2"
       : size === "large"
-      ? "py-3 px-6"
-      : "py-2 px-4";
+        ? "py-3 px-6"
+        : "py-2 px-4";
 
   const fontWeightStyle =
     fontWeight === "regular"
       ? "font-normal"
       : fontWeight === "medium"
-      ? "font-medium"
-      : fontWeight === "semibold"
-      ? "font-semibold"
-      : fontWeight === "bold"
-      ? "font-bold"
-      : "font-normal";
+        ? "font-medium"
+        : fontWeight === "semibold"
+          ? "font-semibold"
+          : fontWeight === "bold"
+            ? "font-bold"
+            : "font-normal";
 
   const variantStyle = variant === "outline" ? outlineColorStyle : colorStyle;
 

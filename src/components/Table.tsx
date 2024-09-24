@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaRegEdit, FaPlus } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import SortIcon from "./ui/SortIcon";
 import Button from "./ui/Button";
+import Dropdown from "./ui/Dropdown";
 
 const initialData = [
   {
@@ -50,6 +51,20 @@ const Table: React.FC = () => {
     setSortConfig({ key, direction });
   };
 
+  const [selectedOption, setSelectedOption] = useState<string>("");
+
+  const options = ["01", "02", "03"];
+
+  const handleDropdownChange = (selected: string) => {
+    setSelectedOption(selected);
+  };
+
+  useEffect(() => {
+    if (selectedOption) {
+      console.log(`${selectedOption}`);
+    }
+  }, [selectedOption]);
+
   return (
     <>
       <div className="my-5">
@@ -59,12 +74,18 @@ const Table: React.FC = () => {
           icon={<FaPlus />}
           fontWeight="semibold"
         />
+        <br />
+        <Dropdown
+          options={options}
+          label="Tanggal Angka"
+          onChange={handleDropdownChange}
+        />
       </div>
 
       <div className="overflow-x-auto rounded-lg border border-gray-200">
         <table className="min-w-full divide-gray-200 bg-white text-sm">
           <thead className="h-12">
-            <tr className="bg-table-header text-black">
+            <tr className="bg-primary-border text-black">
               <th className="px-2 py-2 text-center font-semibold text-black rounded-tl-lg border-r-2 border-white">
                 No
               </th>
@@ -75,12 +96,11 @@ const Table: React.FC = () => {
                 >
                   <span>Judul</span>
                   <SortIcon
-                    className={`ml-2 transition-transform duration-300 ${
-                      sortConfig?.key === "title" &&
+                    className={`ml-2 transition-transform duration-300 ${sortConfig?.key === "title" &&
                       sortConfig.direction === "descending"
-                        ? "rotate-180"
-                        : ""
-                    }`}
+                      ? "rotate-180"
+                      : ""
+                      }`}
                   />
                 </div>
               </th>
@@ -92,12 +112,11 @@ const Table: React.FC = () => {
                 >
                   <span>Tanggal Kegiatan</span>
                   <SortIcon
-                    className={`ml-2 transition-transform duration-300 ${
-                      sortConfig?.key === "date" &&
+                    className={`ml-2 transition-transform duration-300 ${sortConfig?.key === "date" &&
                       sortConfig.direction === "descending"
-                        ? "rotate-180"
-                        : ""
-                    }`}
+                      ? "rotate-180"
+                      : ""
+                      }`}
                   />
                 </div>
               </th>

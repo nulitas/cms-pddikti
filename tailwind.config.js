@@ -9,7 +9,7 @@ export default {
         "primary-hover": "#4322A8",
         "primary-pressed": "#3A1F8C",
         "primary-focus": "#5E3CC6",
-        "table-header": "#e3dbff",
+        "primary-border": "#E3DBFF",
 
         "neutral-10": "#FFFFFF",
         "neutral-20": "#F5F5F5",
