@@ -46,10 +46,10 @@ interface ProfileModalProps {
 const ProfileModal: React.FC<ProfileModalProps> = ({ modalRef }) => {
   return (
     <div
-      className="absolute right-24 top-28 mt-2 rounded-lg px-4 py-3 shadow-shadow-2"
+      className="bg-white absolute right-24 top-28 mt-2 rounded-lg px-4 py-3 shadow-shadow-2"
       ref={modalRef}
     >
-      <div className="flex items-center bg-neutral-30 rounded-lg text-neutral-100 p-3 gap-3">
+      <div className="flex items-center bg-neutral-30  text-neutral-100 p-3 gap-3">
         <PiUserCircleThin size={54} />
         <div>
           <h3 className="font-semibold">Super123</h3>
@@ -60,7 +60,7 @@ const ProfileModal: React.FC<ProfileModalProps> = ({ modalRef }) => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-2 py-3 px-2">
+      <div className="bg-white flex flex-col gap-2 py-3 px-2">
         <div className="flex items-center gap-1">
           <LiaUserCogSolid size={16} />
           <p>Kelola Admin Super</p>
