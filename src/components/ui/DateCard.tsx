@@ -1,10 +1,12 @@
 import { CiCalendar } from "react-icons/ci";
 import { format } from "date-fns";
 
-const DateCard: React.FC = () => {
-  const startDate = new Date("2024-5-1");
-  const endDate = new Date("2024-5-31");
+interface DateCardProps {
+  startDate: Date;
+  endDate: Date;
+}
 
+const DateCard: React.FC<DateCardProps> = ({ startDate, endDate }) => {
   return (
     <div className="flex gap-x-2 items-center">
       <div className="flex items-center border border-gray-300 rounded-lg px-2 py-1 bg-primary-border">

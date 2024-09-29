@@ -1,42 +1,39 @@
-import Table from "../components/Table";
 import Button from "../components/ui/Button";
-import DateCard from "../components/ui/DateCard";
 import { FaPlus } from "react-icons/fa";
+import DateCard from "../components/ui/DateCard";
 import { useState } from "react";
+import Table from "../components/Table";
 
-const ManajemenKegiatan: React.FC = () => {
-  const [startDate] = useState(new Date("2024-05-01"));
-  const [endDate] = useState(new Date("2024-05-31"));
+const ManajemenPublikasiTerbaru: React.FC = () => {
+  const [startDate] = useState(new Date("2020-05-01"));
+  const [endDate] = useState(new Date("2020-05-31"));
 
   const tableData = [
     {
-      title: "Event 1",
-      date: "20 September 2024",
-      description: "This is event 1",
+      title: "Statistik Pendidikan Tinggi Tahun 2020",
+      date: "30 Juli 2020",
       image: "image1.jpg",
-      location: "Jakarta",
+      link: "https://linkdaripublikasinya",
     },
     {
-      title: "Event 2",
-      date: "21 September 2024",
-      description: "This is event 2",
+      title: "1 Statistik Pendidikan Tinggi Tahun 2020",
+      date: "1 Juli 2020",
       image: "image2.jpg",
-      location: "Bandung",
+      link: "https://linkdaripublikasinya",
     },
   ];
 
   const columns = [
-    { label: "Judul Kegiatan", key: "title", sortable: true },
+    { label: "Nama Publikasi", key: "title", sortable: true },
     { label: "Tanggal Kegiatan", key: "date", sortable: true },
-    { label: "Deskripsi Kegiatan", key: "description", sortable: false },
-    { label: "Gambar Kegiatan", key: "image", sortable: false },
-    { label: "Lokasi Kegiatan", key: "location", sortable: true },
+    { label: "Thumbnail Publikasi", key: "image", sortable: false },
+    { label: "Link Unduh", key: "link", sortable: false },
   ];
 
   return (
     <div className="m-10">
       <h1 className="flex text-3xl font-bold text-primary-main font-poppins">
-        Manajemen Kegiatan
+        Manajemen Publikasi Terbaru
       </h1>
 
       <div className="flex justify-between items-center">
@@ -57,4 +54,4 @@ const ManajemenKegiatan: React.FC = () => {
   );
 };
 
-export default ManajemenKegiatan;
+export default ManajemenPublikasiTerbaru;

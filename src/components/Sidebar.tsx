@@ -64,7 +64,7 @@ const Sidebar: React.FC = () => {
               onClick={() =>
                 handleSetActive(
                   "Manajemen Publikasi Terbaru",
-                  "/manajemen-kegiatan"
+                  "/manajemen-publikasi-terbaru"
                 )
               }
             />
@@ -73,7 +73,7 @@ const Sidebar: React.FC = () => {
               label="Manajemen Pengumuman"
               isActive={activeButton === "Manajemen Pengumuman"}
               onClick={() =>
-                handleSetActive("Manajemen Pengumuman", "/manajemen-kegiatan")
+                handleSetActive("Manajemen Pengumuman", "/manajemen-pengumuman")
               }
             />
             <SideButton
@@ -146,7 +146,9 @@ const Sidebar: React.FC = () => {
 
       <div className="flex-grow p-4">
         <Header />
-        <Outlet />
+        <div className="bg-primary-surface p-5 min-h-[100vh]">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
