@@ -48,8 +48,8 @@ const Table: React.FC<TableProps> = ({ data, columns }) => {
   };
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-gray-200">
-      <table className="min-w-full divide-gray-200 bg-white text-sm">
+    <div className="overflow-x-auto">
+      <table className="min-w-full divide-gray-200 bg-white text-sm table-auto">
         <thead className="h-12">
           <tr className="bg-primary-border text-neutral-100">
             <th className="px-2 py-2 text-center font-semibold text-neutral-100 rounded-tl-lg border-r-2 border-white">

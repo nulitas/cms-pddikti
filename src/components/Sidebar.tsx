@@ -87,7 +87,7 @@ const Sidebar: React.FC = () => {
               onClick={() =>
                 handleSetActive(
                   "Manajemen Profile PDDikti",
-                  "/manajemen-kegiatan"
+                  "/manajemen-profil"
                 )
               }
             />
@@ -102,7 +102,7 @@ const Sidebar: React.FC = () => {
               onClick={() =>
                 handleSetActive(
                   "Manajemen Standar Pelayanan",
-                  "/manajemen-kegiatan"
+                  "/manajemen-standar-pelayanan"
                 )
               }
             />
@@ -117,7 +117,7 @@ const Sidebar: React.FC = () => {
               onClick={() =>
                 handleSetActive(
                   "Manajemen Kebijakan Privasi",
-                  "/manajemen-kegiatan"
+                  "/manajemen-kebijakan-privasi"
                 )
               }
             />
@@ -126,7 +126,7 @@ const Sidebar: React.FC = () => {
               label="Manajemen Statistik"
               isActive={activeButton === "Manajemen Statistik"}
               onClick={() =>
-                handleSetActive("Manajemen Statistik", "/manajemen-kegiatan")
+                handleSetActive("Manajemen Statistik", "/manajemen-statistik")
               }
             />
           </div>
@@ -137,9 +137,7 @@ const Sidebar: React.FC = () => {
             icon={RiUserSettingsLine}
             label="Kelola Admin"
             isActive={activeButton === "Kelola Admin"}
-            onClick={() =>
-              handleSetActive("Kelola Admin", "/manajemen-kegiatan")
-            }
+            onClick={() => handleSetActive("Kelola Admin", "/kelola-admin")}
           />
         </div>
       </div>
