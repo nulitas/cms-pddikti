@@ -9,6 +9,7 @@ import ManajemenStandarPelayanan from "./pages/ManajemenStandarPelayanan";
 import ManajemenKebijakanPrivasi from "./pages/ManajemenKebijakanPrivasi";
 import ManajemenStatistik from "./pages/ManajemenStatistik";
 import KelolaAdmin from "./pages/KelolaAdmin";
+import Notifikasi from "./pages/Notifikasi";
 const App: React.FC = () => {
   return (
     <div>
@@ -39,6 +40,7 @@ const App: React.FC = () => {
               element={<ManajemenStatistik />}
             />
             <Route path="kelola-admin" element={<KelolaAdmin />} />
+            <Route path="notifikasi" element={<Notifikasi />} />
           </Route>
         </Routes>
       </Router>
